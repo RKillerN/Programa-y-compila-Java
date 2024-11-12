@@ -46,7 +46,7 @@ En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya ins
 
 ## Paso 3: Verificar la Configuración
 **En una nueva ventana de terminal, ejecutar java -version y javac -version para confirmar que el sistema reconoce la instalación de Java.**
- ![Imagen 3](Imagenes/Paso2.3.png)
+    ![Imagen 3](Imagenes/Paso2.3.png)
 
  
  # Parte 2: Desarrollo y Empaquetado de la Aplicación
@@ -62,9 +62,9 @@ En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya ins
         `System.out.println("¡Hola, mundo!");`
     `}`
 `}`
-    La calse se tiene que llamar igual que el archivo, sino el lenguaje de programación java no s capaz de interpretarlo. Una vez creado lo guargamos con la extensión .java.
+    La clase se tiene que llamar igual que el archivo, sino el lenguaje de programación java no s capaz de interpretarlo. Una vez creado lo guargamos con la extensión .java.
 
-    ![Imagen 3](Imagenes/Paso3.1.png)
+    ![Imagen 4](Imagenes/Paso3.1.png)
 
 ## Paso 5: Compilación del Programa
 
@@ -77,9 +77,43 @@ En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya ins
 2. **Ejecutar `javac HelloWorld.java`**:  
    - Para compilar el archivo `HelloWorld.java` se usa el comando javac y genera un archivo `HelloWorld.class` en el mismo directorio. La compilación convierte el código fuente de Java en bytecode que puede ser ejecutado por la Máquina Virtual de Java (JVM).
 
-   ![Imagen 3](Imagenes/Paso3.2.png)
+   ![Imagen 5](Imagenes/Paso3.2.png)
 
 3. **Verificar que el archivo `HelloWorld.class` se ha creado**:
    - Podemos comprovar desde el gestor de archivos que se a creado el archivo `HelloWorld.class`. Este archivo es el resultado de la compilación y contiene el bytecode del programa.
-   ![Imagen 3](Imagenes/Paso3.2.2.png)
+   ![Imagen 6](Imagenes/Paso3.2.2.png)
+
+
+## Paso 6: Creación del Archivo JAR
+
+1. **Crear un archivo de manifiesto `manifest.txt` que contenga `Main-Class: HelloWorld`**:
+   - Desde el editor de texto crea un nuevo archivo llamado `manifest.txt`.
+   - En este se le añade la siguiente línea en el archivo:
+     ```
+     Main-Class: HelloWorld
+     ```
+   - Guardamos el archivo en el mismo directorio que `HelloWorld.java` y `HelloWorld.class`. El archivo de manifiesto especifica la clase principal que debe ejecutarse cuando se inicia el archivo JAR. Esto es crucial para que la Máquina Virtual de Java (JVM) sepa cuál es el punto de entrada del programa.
+
+2. **Empaquetar el archivo JAR ejecutando**:
+   - Desde la línea de comandos navegamos al directorio que contiene `HelloWorld.class` y `manifest.txt`.
+   - Ejecuta el siguiente comando para crear el archivo JAR:
+     ```bash
+     jar cfm HelloWorld.jar manifest.txt HelloWorld.class
+     ```
+   - Este comando utiliza la herramienta `jar` para crear un archivo JAR llamado `HelloWorld.jar`. La opción `c` indica que se va a crear un nuevo archivo JAR, `f` especifica el nombre del archivo JAR, y `m` indica que se va a incluir un archivo de manifiesto. El archivo JAR resultante contendrá tanto el archivo de manifiesto como la clase compilada `HelloWorld.class`.
+
+3. **Ejecutar el archivo JAR con**:
+   - En la línea de comandos:
+     ```bash
+     java -jar HelloWorld.jar
+     ```
+   - Este comando le dice a la JVM que ejecute el archivo JAR especificado. La opción `-jar` le indica a la JVM que debe buscar el archivo de manifiesto dentro del JAR para encontrar la clase principal y ejecutar su método `main`.
+
+4. **Verificar que el programa imprime "¡Hola, mundo!"**:
+   - Si todo ha sido configurado correctamente, deberías ver el mensaje "¡Hola, mundo!" impreso en la consola. Esto confirma que el programa se ha compilado y empaquetado correctamente y que la JVM puede ejecutar el archivo JAR sin problemas.
+
+   En la siguiente captura se muestra los comandos y el resultado de la salida:
+
+     ![Imagen 7](Imagenes/Paso3.3.png)
+
 
