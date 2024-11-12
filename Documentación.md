@@ -13,3 +13,37 @@ En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya ins
 
 ![Imagen 2](Imagenes/paso1.2.png)
 5. **Copiar la ruta completa del campo** `JRE home` que aparece en la ventana.
+
+## Paso 2: Configurar Java en el PATH usando la Ruta Obtenida
+
+### Para usuarios de Windows:
+
+1. **Abrir el buscador de Windows**:
+   - Haz clic en el icono de búsqueda en la barra de tareas o presiona `Win + S`.
+
+2. **Buscar "Editar las variables de entorno del sistema"**:
+   - Escribe `Editar las variables de entorno del sistema` en el cuadro de búsqueda.
+   - Selecciona la opción que aparece en los resultados de búsqueda, como resutado se abre la ventana de la siguiente imagen:
+
+![Imagen 2](Imagenes/Paso2.1.png)
+
+3. **Acceder a Variables de entorno**:
+   - En la ventana de Propiedades del sistema, haz clic en el botón `Variables de entorno...`.
+
+4. **Editar la variable Path**:
+   - En la sección "Variables del sistema", busca la variable `Path` y selecciónala.
+   - Haz clic en `Editar`.
+
+5. **Añadir una nueva ruta**:
+   - En la ventana de edición de la variable Path, haz clic en `Nuevo`.
+   - Añade la ruta completa al directorio `bin` de la JRE obtenida de Eclipse, por ejemplo: `C:\ruta\a\la\instalación\bin`.
+
+   ![Imagen 2](Imagenes/Paso2.2.png)
+
+6. **Guardar los cambios**:
+   - Haz clic en `Aceptar` para guardar los cambios.
+   - Cierra todas las ventanas de configuración.
+
+##Paso 3: Verificar la Configuración##
+**En una nueva ventana de terminal, ejecutar java -version y javac -version para confirmar que el sistema reconoce la instalación de Java.**
+ ![Imagen 2](Imagenes/Paso2.3.png)
