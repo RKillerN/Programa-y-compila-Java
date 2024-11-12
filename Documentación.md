@@ -1,4 +1,4 @@
-## Parte 1: Configuración del Entorno de Java
+# Parte 1: Configuración del Entorno de Java
 
 ### Paso 1: Obtener la Ruta del Binario de Java
 En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya instalada en nuestro IDE Eclipse.
@@ -44,6 +44,29 @@ En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya ins
    - Haz clic en `Aceptar` para guardar los cambios.
    - Cierra todas las ventanas de configuración.
 
-##Paso 3: Verificar la Configuración##
+## Paso 3: Verificar la Configuración
 **En una nueva ventana de terminal, ejecutar java -version y javac -version para confirmar que el sistema reconoce la instalación de Java.**
- ![Imagen 2](Imagenes/Paso2.3.png)
+ ![Imagen 3](Imagenes/Paso2.3.png)
+
+ 
+ # Parte 2: Desarrollo y Empaquetado de la Aplicación
+
+ ## Paso 4: Creación del Programa
+
+ 1. **Crear un archivo** `HelloWorld.java` **y editarlo.**
+
+    - Desde un editor de texto creamos el archivo HelloWorld.java, dentro de este añadimos el siguiente código:
+
+    `public class HelloWorld {`
+    `public static void main(String[] args) {`
+        `System.out.println("¡Hola, mundo!");`
+    `}`
+`}`
+    La calse se tiene que llamar igual que el archivo, sino el lenguaje de programación java no s capaz de interpretarlo. Una vez creado lo guargamos con la extensión .java.
+
+    ![Imagen 3](Imagenes/Paso3.1.png)
+
+
+
+
+
