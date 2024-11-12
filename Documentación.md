@@ -66,7 +66,20 @@ En lugar de instalar Java, vamos a tratar de utilizar la versión de Java ya ins
 
     ![Imagen 3](Imagenes/Paso3.1.png)
 
+## Paso 5: Compilación del Programa
 
+1. **Navegar al directorio donde está `HelloWorld.java`**:
+   - Desde la línea de comandos con `cd` cambiamos al directorio que tiene el archivo `HelloWorld.java`. Por ejemplo:
+     ```bash
+     cd C:\ruta\al\archivo\HelloWorld.java
+     ```
 
+2. **Ejecutar `javac HelloWorld.java`**:  
+   - Para compilar el archivo `HelloWorld.java` se usa el comando javac y genera un archivo `HelloWorld.class` en el mismo directorio. La compilación convierte el código fuente de Java en bytecode que puede ser ejecutado por la Máquina Virtual de Java (JVM).
 
+   ![Imagen 3](Imagenes/Paso3.2.png)
+
+3. **Verificar que el archivo `HelloWorld.class` se ha creado**:
+   - Podemos comprovar desde el gestor de archivos que se a creado el archivo `HelloWorld.class`. Este archivo es el resultado de la compilación y contiene el bytecode del programa.
+   ![Imagen 3](Imagenes/Paso3.2.2.png)
 
